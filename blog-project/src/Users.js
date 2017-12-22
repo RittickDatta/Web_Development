@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Blog from './Blog.js';
+import Blogs from './Blogs.js';
 
 class Users extends Component{
   render(){
@@ -14,8 +14,10 @@ class Users extends Component{
     return (
       <div className="Users">
         <h2>Users</h2>
-          {Users}
-      <div>
+          {users}
+      </div>
     );
   }
 }
+
+export default Users;

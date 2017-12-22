@@ -2,20 +2,21 @@ import React, { Component } from 'react';
 import backbone from './backbone.png';
 import uuid from 'uuid';
 import './App.css';
+import Users from './Users';
 
 class App extends Component {
 
   constructor(){
     super();
-    this.setState={
+    this.state={
       users: [
         {
           id:uuid.v4(),
-          blogs:[]
+          blogs:['blog1']
         },
         {
           id:uuid.v4(),
-          blogs:[]
+          blogs:['blog2']
         }
       ],
       dashboardBlogs: []
@@ -33,7 +34,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <p>
-          
+          <Users users={this.state.users}/>
         </p>
       </div>
     );
