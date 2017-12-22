@@ -12,11 +12,11 @@ class App extends Component {
       users: [
         {
           id:uuid.v4(),
-          blogs:['blog1']
+          blogs:[]
         },
         {
           id:uuid.v4(),
-          blogs:['blog2']
+          blogs:[]
         }
       ],
       dashboardBlogs: []
