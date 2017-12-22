@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 
 class Blog extends Component{
   render(){
-
-
-    return;
+    return (
+      <li className="Blog">
+        <strong>this.props.blog.id</strong>
+      </li>
+    );
   }
 }
 

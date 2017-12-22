@@ -7,13 +7,18 @@ class Blogs extends Component{
     if(this.props.blogs){
       blogs = this.props.blogs.map(blog =>{
         return (
-          <Blog blog={blog}/> //INSERT KEY HERE
+          <div>
+          ID: {blog.id}<br />
+          Title: {blog.title}<br />
+          Body: {blog.body}<br />
+          Comments: {blog.comments}
+          </div>
+          //<Blog blog={blog}/>
         );
       });
     }
     return (
       <div className="Blogs">
-        <h2>Blogs</h2>
         {blogs}
       </div>
     );

@@ -12,11 +12,29 @@ class App extends Component {
       users: [
         {
           id:uuid.v4(),
-          blogs:[]
+          blogs:[
+            {
+            id:uuid.v4(),
+            title:'Blog 1',
+            body:'This is blog 1.',
+            comments: [
+                        'This is comment on blog 1.'
+                      ]
+            }
+            ]
         },
         {
           id:uuid.v4(),
-          blogs:[]
+          blogs:[
+            {
+            id:uuid.v4(),
+            title:'Blog 2',
+            body:'This is blog 2.',
+            comments: [
+                        'This is comment on blog 2.'
+                      ]
+            }
+            ]
         }
       ],
       dashboardBlogs: []
@@ -31,7 +49,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to Blogger</h1>
         </header>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+
         </p>
         <p>
           <Users users={this.state.users}/>

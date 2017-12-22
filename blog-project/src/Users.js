@@ -8,16 +8,16 @@ class Users extends Component{
       users = this.props.users.map(user => {
         return (
           <div>
-            {user.id}
+            //{user.id}
             <Blogs key={user.id} blogs={user.blogs} />
+            <br />
           </div>
         );
       });
     }
     return (
       <div className="Users">
-        <h2>Users</h2>
-          {users}
+          <p>{users}</p>
       </div>
     );
   }
