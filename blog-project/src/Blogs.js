@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import Blog from './Blog.js';
 
 class Blogs extends Component{
+  deleteBlog(){
+    this.props.onDelete();
+  }
   render(){
     let blogs;
     if(this.props.blogs){
@@ -25,6 +28,9 @@ class Blogs extends Component{
                 <tr>
                   <td>Comments:</td>
                   <td>{blog.comments}</td>
+                </tr>
+                <tr>
+                  <a href="#" onClick={this.deleteBlog.bind(this, this.props.user.id)}>X</a>
                 </tr>
               </tbody>
             </table>

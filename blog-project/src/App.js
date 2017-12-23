@@ -73,7 +73,7 @@ class App extends Component {
         </p>
         <p>
           <NewBlog newBlog={this.handleAddBlog.bind(this)}/>
-          <Users users={this.state.users}/>
+          <Users users={this.state.users} onDelete={this.handleDeleteBlog.bind(this)} />
         </p>
       </div>
     );
