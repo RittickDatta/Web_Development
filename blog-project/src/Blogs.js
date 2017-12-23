@@ -8,10 +8,26 @@ class Blogs extends Component{
       blogs = this.props.blogs.map(blog =>{
         return (
           <div>
-          ID: {blog.id}<br />
-          Title: {blog.title}<br />
-          Body: {blog.body}<br />
-          Comments: {blog.comments}
+            <table width="200" border="1" align="center">
+              <tbody>
+                <tr>
+                  <td>ID:</td>
+                  <td>{blog.id}</td>
+                </tr>
+                <tr>
+                  <td>Title:</td>
+                  <td>{blog.title}</td>
+                </tr>
+                <tr>
+                  <td>Body:</td>
+                  <td>{blog.body}</td>
+                </tr>
+                <tr>
+                  <td>Comments:</td>
+                  <td>{blog.comments}</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
           //<Blog blog={blog}/>
         );
