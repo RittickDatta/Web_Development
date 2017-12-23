@@ -3,6 +3,7 @@ import backbone from './backbone.png';
 import uuid from 'uuid';
 import './App.css';
 import Users from './Users';
+import NewBlog from './NewBlog';
 
 class App extends Component {
 
@@ -41,6 +42,25 @@ class App extends Component {
     }
   }
 
+  handleAddBlog(blog){
+    let users = this.state.users;
+    let user = users[0];
+    user.blogs.push(blog);
+    users[0] = user;
+    this.setState({users: users});
+  }
+
+  handleDeleteBlog(id){
+    let users = this.state.users;
+    let user = users[0];
+    let blogs = user.blogs;
+    let index = blogs.findIndex(x => x.id === id);
+    blogs.splice(index, 1);
+    user.blogs = blogs;
+    users[0] = user;
+    this.setState({users: users});
+  }
+
   render() {
     return (
       <div className="App">
@@ -52,6 +72,7 @@ class App extends Component {
 
         </p>
         <p>
+          <NewBlog newBlog={this.handleAddBlog.bind(this)}/>
           <Users users={this.state.users}/>
         </p>
       </div>
