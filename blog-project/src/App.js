@@ -4,6 +4,7 @@ import uuid from 'uuid';
 import './App.css';
 import Users from './Users';
 import NewBlog from './NewBlog';
+import Dashboard from './Dashboard';
 
 class App extends Component {
 
@@ -74,6 +75,7 @@ class App extends Component {
         <p>
           <NewBlog newBlog={this.handleAddBlog.bind(this)}/>
           <Users users={this.state.users} onDelete={this.handleDeleteBlog.bind(this)} />
+          <Dashboard users={this.state.users} />
         </p>
       </div>
     );
