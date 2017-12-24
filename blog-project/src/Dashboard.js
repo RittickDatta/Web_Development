@@ -6,7 +6,10 @@ class Dashboard extends Component{
   render(){
       let blogItems = [];
       if(this.props.users){
-        //TODO
+        blogItems = this.props.users.map(user => {
+          
+          return (blogItems.push(user.blogs));
+        });
       }
       return (
         <div className="Dashboard">

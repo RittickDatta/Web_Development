@@ -1,7 +1,29 @@
 import React, { Component } from 'react';
 import Blog from './Blog.js';
+import image from './image.jpg';
 
 class Blogs extends Component{
+
+  constructor(){
+    super();
+    this.state={
+      newComment:{}
+    }
+  }
+
+  handleSubmit(e){
+    if(this.refs.comment.value === ''){
+      alert('No Comment Entered.')
+    } else {
+      this.setState({newComment:{
+        comment: this.refs.comment.value
+      }}, function(){
+
+      });
+    }
+    e.preventDefault();
+  }
+
   deleteBlog(){
     this.props.onDelete();
   }
@@ -13,6 +35,9 @@ class Blogs extends Component{
           <div>
             <table width="200" border="1" align="center">
               <tbody>
+                <tr>
+                  <img src={image} alt="Blog Image" height="100" width="300"/>
+                </tr>
                 <tr>
                   <td>ID:</td>
                   <td>{blog.id}</td>
@@ -29,6 +54,22 @@ class Blogs extends Component{
                   <td>Comments:</td>
                   <td>{blog.comments}</td>
                 </tr>
+
+                <div>
+                  <h3> Comments </h3>
+                  <form onSubmit={this.handleSubmit.bind(this)}>
+                    <div>
+                      <label>Comments</label><br/>
+                      <input type="text" ref="comment"/>
+                    </div>
+                    <br/>
+                      <input type="submit" value="Post"/>
+                    <br/>
+                  </form>
+                </div>
+
+
+
                 <tr>
                   <a href="#" onClick={this.deleteBlog.bind(this, this.props.user.id)}>X</a>
                 </tr>

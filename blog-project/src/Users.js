@@ -12,7 +12,6 @@ class Users extends Component{
       users = this.props.users.map(user => {
         return (
           <div>
-            //{user.id}
             <Blogs onDelete={this.deleteBlog.bind(this)} user={user} key={user.id} blogs={user.blogs} />
             <br />
           </div>

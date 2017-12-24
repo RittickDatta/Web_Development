@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import backbone from './backbone.png';
+import image from './image.jpg';
 import uuid from 'uuid';
 import './App.css';
 import Users from './Users';
@@ -16,6 +17,7 @@ class App extends Component {
           id:uuid.v4(),
           blogs:[
             {
+            picture:'image.jpg', //CHECK
             id:uuid.v4(),
             title:'Blog 1',
             body:'This is blog 1.',
@@ -29,6 +31,7 @@ class App extends Component {
           id:uuid.v4(),
           blogs:[
             {
+            picture:{image},
             id:uuid.v4(),
             title:'Blog 2',
             body:'This is blog 2.',
@@ -75,7 +78,7 @@ class App extends Component {
         <p>
           <NewBlog newBlog={this.handleAddBlog.bind(this)}/>
           <Users users={this.state.users} onDelete={this.handleDeleteBlog.bind(this)} />
-          <Dashboard users={this.state.users} />
+          <Dashboard dashboard={this.state.dashboard} />
         </p>
       </div>
     );
