@@ -32,8 +32,8 @@ class NewBlog extends Component{
   }
 
   render(){
-    let imageOptions = ['image','coffee','creativeText'].map(image => {
-      return <option key={image} value={image}>{image}</option>
+    let imageOptions = ['image','coffee','creativeText'].map(img => {
+      return <option key={img} value={img}>{img}</option>
     });
     return(
       <div>

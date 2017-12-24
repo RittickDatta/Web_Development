@@ -9,7 +9,7 @@ class Blogs extends Component{
   constructor(){
     super();
     this.state={
-      newComment:{}
+      newComment:''
     }
   }
 
@@ -19,9 +19,7 @@ class Blogs extends Component{
     } else {
       this.setState({newComment:{
         comment: this.refs.comment.value
-      }}, function(){
-
-      });
+      }});
     }
     e.preventDefault();
   }
@@ -54,7 +52,7 @@ class Blogs extends Component{
                 </tr>
                 <tr>
                   <td>Comments:</td>
-                  <td>{blog.comments}</td>
+                  <td>{blog.comments} <br /> {this.props.newComment}</td>
                 </tr>
 
                 <div>
