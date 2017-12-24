@@ -31,7 +31,7 @@ class App extends Component {
           id:uuid.v4(),
           blogs:[
             {
-            picture:{image},
+            picture:'image.jpg',
             id:uuid.v4(),
             title:'Blog 2',
             body:'This is blog 2.',

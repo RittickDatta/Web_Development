@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Blog from './Blog.js';
 import image from './image.jpg';
+import coffee from './coffee.jpg';
+import creativeText from './creativeText.jpg';
 
 class Blogs extends Component{
 
@@ -36,7 +38,7 @@ class Blogs extends Component{
             <table width="200" border="1" align="center">
               <tbody>
                 <tr>
-                  <img src={image} alt="Blog Image" height="100" width="300"/>
+                  <img src={blog.picture} alt="Blog Image" height="100" width="300"/>
                 </tr>
                 <tr>
                   <td>ID:</td>
