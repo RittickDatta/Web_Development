@@ -7,13 +7,13 @@ class Dashboard extends Component{
       let blogItems = [];
       if(this.props.users){
         blogItems = this.props.users.map(user => {
-          
+
           return (blogItems.push(user.blogs));
         });
       }
       return (
         <div className="Dashboard">
-          <h2>All Blogs</h2>
+          <h2>Dashboard</h2>
           {blogItems}
         </div>
       );

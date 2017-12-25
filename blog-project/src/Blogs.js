@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Blog from './Blog.js';
 import image from './image.jpg';
 import coffee from './coffee.jpg';
 import creativeText from './creativeText.jpg';
