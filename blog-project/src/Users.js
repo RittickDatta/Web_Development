@@ -6,6 +6,8 @@ class Users extends Component{
     this.props.onDelete(id);
   }
 
+
+
   render(){
     let users;
     if(this.props.users){

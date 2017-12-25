@@ -32,7 +32,7 @@ class NewBlog extends Component{
   }
 
   render(){
-    let imageOptions = ['image','coffee','creativeText'].map(img => {
+    let imageOptions = ['image.jpg','coffee.jpg','creativeText.jpg'].map(img => {
       return <option key={img} value={img}>{img}</option>
     });
     return(

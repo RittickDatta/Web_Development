@@ -20,6 +20,11 @@ class Blogs extends Component{
     e.preventDefault();
   }
 
+  handleShare(e){
+
+    e.preventDefault();
+  }
+
   deleteBlog(){
     this.props.onDelete();
   }
@@ -29,7 +34,7 @@ class Blogs extends Component{
       blogs = this.props.blogs.map(blog =>{
         return (
           <div>
-            <table width="200" border="1" align="center">
+            <table width="200" border="1" align="center" class="w3-table w3-striped w3-bordered">
               <tbody>
                 <tr>
                   <img src={blog.picture} alt="Blog Image" height="100" width="300"/>
@@ -48,26 +53,38 @@ class Blogs extends Component{
                 </tr>
                 <tr>
                   <td>Comments:</td>
-                  <td> {this.props.user.blogs[0].comments}</td>
+                  <td> {blog.comments}</td>
                 </tr>
 
                 <div>
                   <h3> Comments </h3>
+                  <tr>
+                  <td>
                   <form onSubmit={this.handleSubmit.bind(this)}>
                     <div>
                       <label>Comments</label><br/>
                       <input type="text" ref="comment"/>
                     </div>
                     <br/>
-                      <input type="submit" value="Post"/>
+                      <input type="submit" value="Comment"/>
                     <br/>
                   </form>
+
+                    <form onSubmit={this.handleShare.bind(this)}>
+                      <div>
+                        <br/>
+                        <input type="submit" value="Share"/>
+                        <br/>
+                      </div>
+                    </form>
+                  </td>
+                  </tr>
                 </div>
 
 
 
                 <tr>
-                  <a href="#" onClick={this.deleteBlog.bind(this, this.props.user.id)}>X</a>
+                  <a href="#" onClick={this.deleteBlog.bind(this, this.props.user.id)}>Delete</a>
                 </tr>
               </tbody>
             </table>
