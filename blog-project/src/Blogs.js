@@ -8,18 +8,15 @@ class Blogs extends Component{
 
   constructor(){
     super();
-    this.state={
-      newComment:''
-    }
   }
 
   handleSubmit(e){
     if(this.refs.comment.value === ''){
       alert('No Comment Entered.')
     } else {
-      this.setState({newComment:{
-        comment: this.refs.comment.value
-      }});
+      console.log(this.refs.comment.value);
+      console.log(this.props.user.blogs[0].comments[0]);
+      this.props.user.blogs[0].comments.push(this.refs.comment.value);
     }
     e.preventDefault();
   }
@@ -52,7 +49,7 @@ class Blogs extends Component{
                 </tr>
                 <tr>
                   <td>Comments:</td>
-                  <td>{blog.comments} <br /> {this.props.newComment}</td>
+                  <td> {this.props.user.blogs[0].comments}</td>
                 </tr>
 
                 <div>
