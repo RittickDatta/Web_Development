@@ -37,7 +37,7 @@ class Blogs extends Component{
             <table width="200" border="1" align="center" class="w3-table w3-striped w3-bordered">
               <tbody>
                 <tr>
-                  <img src={blog.picture} alt="Blog Image" height="100" width="300"/>
+                  <img src="image.jpg" alt="Blog Image" height="100" width="300"/>
                 </tr>
                 <tr>
                   <td>ID:</td>

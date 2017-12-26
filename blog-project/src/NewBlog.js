@@ -19,7 +19,7 @@ class NewBlog extends Component{
       alert('Title is Required.');
     } else {
       this.setState({newBlog:{
-        picture: this.refs.blogImage.value,
+
         id: uuid.v4(),
         title: this.refs.title.value,
         body: this.refs.body.value,
@@ -40,10 +40,8 @@ class NewBlog extends Component{
         <h3> New Blog </h3>
         <form onSubmit={this.handleSubmit.bind(this)}>
           <div>
-            <label>Select Image</label><br />
-            <select ref="blogImage">
-              {imageOptions}
-            </select>
+            <label></label><br />
+        
           </div>
           <div>
             <label>Title</label><br/>
