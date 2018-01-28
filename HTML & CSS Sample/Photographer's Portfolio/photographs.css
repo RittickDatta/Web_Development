@@ -1,12 +1,12 @@
-div {
-	width: 100px;
-	float:left;
+img {
+	width: 30%;	
+	float: left;
+	margin: 1.66%;
 }
-
-#one {
-	background-color:red;
-}
-
-#two {
-	background-color: purple;	
+p {
+	font-family:'Supermercado One', cursive;
+	margin-left: 1.66%;
+	font-size:23px;
+	font-weight:800;
+	text-transform:uppercase;
 }
