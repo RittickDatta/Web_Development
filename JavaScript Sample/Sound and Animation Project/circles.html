@@ -7,26 +7,38 @@
         <link rel="stylesheet" href="circles.css">
         <script type="text/javascript" src="paper-full.js"></script>
         <script type="text/paperscript" canvas="myCanvas">
-	// Create a Paper.js Path to draw a line into it:
-	var path = new Path();
-	// Give the stroke a color
-	path.strokeColor = 'orange';
-	var start = new Point(50, 150);
-	// Move to start and draw a line from there
-	path.moveTo(start);
-	// Note the plus operator on Point objects.
-	// PaperScript does that for us, and much more!
-	path.lineTo(start + [ 100, -50 ]);
-    var myCircle = new Path.Circle(new Point(100, 70), 40);
-myCircle.fillColor = 'blue';
 
-var circle2 = new Path.Circle(new Point(40, 40), 40);
-circle2.fillColor = "purple";
-</script>
+        var circles = [];
+        
+        function onKeyDown(event) {
+        var maxPoint = new Point(view.size.width, view.size.height);
+        var randomPoint = Point.random();
+        var point = maxPoint * randomPoint;
+        var newCircle = new Path.Circle(point, 500);
+        newCircle.fillColor = "orange";
+        console.log(maxPoint);
+        	circles.push(newCircle);
+       }
+       
+
+        function onFrame(event){
+        for(var i=0; i< circles.length; i++){
+            circles[i].fillColor.hue += 1;
+            circles[i].scale(.9);
+        }
+
+        }
+
+
+        
+    
+
+
+        </script>
     </head>
-    
+
     <body>
-       <canvas id="myCanvas" resize></canvas>
+        <canvas id="myCanvas" resize></canvas>
     </body>
-    
+
 </html>
